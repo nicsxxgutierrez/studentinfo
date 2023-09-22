@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\studModel;
+use App\Models\secModel;
 class MainController extends BaseController
 {
     public function delete($data)
