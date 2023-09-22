@@ -22,10 +22,19 @@
             </select>
             <br>
             <label for="StudCourse">Course: </label>
-            <input type="text" id="StudCourse" placeholder="Student Section" name="StudCourse" required value="<?= isset($d['StudCourse']) ? $d['StudCourse'] : '' ?>">
+            <select id="text" name="StudCourse" placeholder="Student Course" name="StudCourse" required value="<?= isset($d['StudCourse']) ? $d['StudCourse'] : '' ?>">
+                <option value="BSIT" <?= isset($d['StudCourse']) === 'BSIT' ? 'selected' : '' ?>>BSIT</option>
+            </select>
             <br>
-            <label for="StudSection">Section: </label>
-            <input type="text" id="StudSection" placeholder="Student Section" name="StudSection" required value="<?= isset($d['StudSection']) ? $d['StudSection'] : '' ?>">
+            <label for="StudSection">Section</label>
+            <select type="text" name="StudSection" placeholder="Student Section" name="StudSection" required value="<?= isset($d['StudSection']) ? $d['StudSection'] : '' ?>">
+                <option value="F1" <?= isset($d['StudSection']) === 'F1' ? 'selected' : '' ?>>F1</option>
+                <option value="F2" <?= isset($d['StudSection']) === 'F2' ? 'selected' : '' ?>>F2</option>
+                <option value="F3" <?= isset($d['StudSection']) === 'F3' ? 'selected' : '' ?>>F3</option>
+                <option value="F4" <?= isset($d['StudSection']) === 'F4' ? 'selected' : '' ?>>F4</option>
+                <option value="F5" <?= isset($d['StudSection']) === 'F5' ? 'selected' : '' ?>>F5</option>
+                <option value="F6" <?= isset($d['StudSection']) === 'F6' ? 'selected' : '' ?>>F6</option>
+            </select>
             <br>
             <label for="StudYear">Year Level: </label>
             <input type="number" id="StudYear" placeholder="Student Year Level" name="StudYear" required value="<?= isset($d['StudYear']) ? $d['StudYear'] : '' ?>">
