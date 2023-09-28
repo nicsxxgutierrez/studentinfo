@@ -61,6 +61,17 @@ class MainController extends BaseController
         {
             $main->save($data);
         }
+        $sectionModel = new secModel();
+        $sectionData = [
+            'Section' => $this->request->getPost('StudSection'), 
+        ];
+        $existingSection = $sectionModel->where('Section', $this->request->getPost('StudSection'))->first();
+        
+        if ($existingSection) {
+            $sectionModel->set($sectionData)->where('ID', $existingSection['ID'])->update();
+        } else {
+            $sectionModel->save($sectionData);
+        }
 
         return redirect()->to('/test');
     }
