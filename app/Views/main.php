@@ -33,7 +33,6 @@
                 <option value="F3" <?= isset($d['StudSection']) === 'F3' ? 'selected' : '' ?>>F3</option>
                 <option value="F4" <?= isset($d['StudSection']) === 'F4' ? 'selected' : '' ?>>F4</option>
                 <option value="F5" <?= isset($d['StudSection']) === 'F5' ? 'selected' : '' ?>>F5</option>
-                <option value="F6" <?= isset($d['StudSection']) === 'F6' ? 'selected' : '' ?>>F6</option>
             </select>
             <br>
             <label for="StudYear">Year Level: </label>
